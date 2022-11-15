@@ -1,6 +1,6 @@
-**gkchris-pathdoras-box**
+# **gkchris-pathdoras-box**
 
-***About the pathtool***
+## ***About the pathtool***
 
 Given a root folder, the tool creates a txt file named *paths.txt*. If the file already exists, the new records will be appended to the existing file instead of overwriting.
 The function returns a promise, resolve true when finished.
