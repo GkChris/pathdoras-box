@@ -1,10 +1,10 @@
-**Pathtool**
+**gkchris-pathdoras-box**
 
-***Guide***
+***About the pathtool***
 
-Given a root folder, the tool creates a txt file -name: paths.txt- with the paths of all js childs.
-Function contains a promise that returns true.
-Import the {pathtool} function and assign the root folder as a parameter.
+Given a root folder, the tool creates a txt file *name: paths.txt*. If the file already exists, the new records will be appended to the existing file instead of overwriting.
+The function returns a promise, resolve true when finished.
+Import the *pathtool* function and pass the root folder as a parameter.
 
 ```Javascript
 const {pathtool} = require('gkchris-pathdoras-box');
