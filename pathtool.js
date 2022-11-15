@@ -3,8 +3,8 @@ const fs = require('fs');
 var path = require('path');
 
 var results = [];
-async function pathtool(dir){
-        
+async function pathtool(dir, fileName){
+    var file_name = fileName ? fileName : 'paths.txt'
     var dirname = path.dirname(dir);    
     var basename = path.basename(dir);
     var pathname = dirname+'/'+basename;
@@ -16,7 +16,7 @@ async function pathtool(dir){
         type = await fsp.lstat(pathname+'/'+content)
         if(type.isFile() && content.endsWith('.js')) {
             results.push(pathname+'/'+content)
-            fs.appendFileSync('paths.txt', pathname+'/'+content+'\n')
+            fs.appendFileSync(fileName, pathname+'/'+content+'\n')
             continue;
         } 
     
