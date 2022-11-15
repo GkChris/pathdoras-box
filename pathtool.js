@@ -2,8 +2,8 @@ const fsp = require('fs').promises;
 const fs = require('fs');
 var path = require('path');
 
-var results = [];
-async function pathtool(dir){
+
+async function pathtool(dir, results){
 
     return new Promise(async (resolve, reject) => {
         var dirname = path.dirname(dir);    
@@ -22,10 +22,10 @@ async function pathtool(dir){
             } 
         
             if(type.isDirectory()) {
-                pathtool(pathname+'/'+content)
+                await pathtool(pathname+'/'+content, results)
             }
         }
-        resolve(true);
+        resolve(results);
     })
         
 }
