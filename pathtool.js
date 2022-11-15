@@ -1,13 +1,11 @@
 const fsp = require('fs').promises;
 const fs = require('fs');
 var path = require('path');
-const default_dirname = process.argv[2] ? process.argv[2] : './';
 
 var results = [];
-async function terminator(dir){
+async function pathtool(dir){
         
     var dirname = path.dirname(dir);    
-    var relativepath = path.relative(default_dirname, dir);
     var basename = path.basename(dir);
     var pathname = dirname+'/'+basename;
     var file_content = fs.readdirSync(pathname);
@@ -18,20 +16,15 @@ async function terminator(dir){
         type = await fsp.lstat(pathname+'/'+content)
         if(type.isFile() && content.endsWith('.js')) {
             results.push(pathname+'/'+content)
+            fs.appendFileSync('paths.txt', pathname+'/'+content+'\n')
             continue;
         } 
     
         if(type.isDirectory()) {
-            terminator(pathname+'/'+content)
+            pathtool(pathname+'/'+content)
         }
     }
-    console.log('Dirname: ',dirname);
-    console.log('Relative path: ',relativepath);
-    console.log('Basename: ',basename);
-    console.log('Pathname: ',pathname);
-    console.log('File content: ',file_content);
-    console.log('Results: ',results);
 }
 
-terminator(default_dirname)
+module.exports = {pathtool}
 
