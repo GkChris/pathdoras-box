@@ -13,7 +13,9 @@
   "keywords": [
     "js",
     "path",
-    "recursive"
+    "recursive",
+    "extractor",
+    "search"
   ],
   "author": "gkchris",
   "license": "ISC",
