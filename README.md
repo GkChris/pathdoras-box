@@ -18,5 +18,5 @@ Third parameter is optional. Pass true for writing results to external txt file
 ```Javascript
 const {pathtool} = require('gkchris-pathdoras-box');
 
-pathtool('<root_folder>', [], '<Boolean>')
+pathtool('<root_folder_path>', [], Boolean)
 ```
