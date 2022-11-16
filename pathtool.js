@@ -6,6 +6,12 @@ var path = require('path');
 async function pathtool(dir, results, txtWrite){
 
     return new Promise(async (resolve, reject) => {
+
+        if(!dir || !results) {
+            reject(new Error('Missing parameter!'));
+        }
+
+        
         var dirname = path.dirname(dir);    
         var basename = path.basename(dir);
         var pathname = dirname+'/'+basename;
