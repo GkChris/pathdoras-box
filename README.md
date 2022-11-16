@@ -8,8 +8,11 @@ Pathtool parses through every single branch of the root's folder tree and resolv
 
 #### Usage
 Import the *pathtool* function.
-First parameter is the root folder,
+
+First parameter is the root folder.
+
 Second parameter needs to be an empty array.
+
 Third parameter is optional. Pass true for writing results to external txt file
 
 ```Javascript
