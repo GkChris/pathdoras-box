@@ -3,7 +3,7 @@ const fs = require('fs');
 var path = require('path');
 
 
-async function pathtool(dir, results){
+async function pathtool(dir, results, txtWrite){
 
     return new Promise(async (resolve, reject) => {
         var dirname = path.dirname(dir);    
@@ -17,12 +17,12 @@ async function pathtool(dir, results){
             type = await fsp.lstat(pathname+'/'+content)
             if(type.isFile() && content.endsWith('.js')) {
                 results.push(pathname+'/'+content)
-                fs.appendFileSync('paths.txt', pathname+'/'+content+'\n')
+                if(txtWrite) fs.appendFileSync('paths.txt', pathname+'/'+content+'\n')
                 continue;
             } 
         
             if(type.isDirectory()) {
-                await pathtool(pathname+'/'+content, results)
+                await pathtool(pathname+'/'+content, results, txtWrite)
             }
         }
         resolve(results);
