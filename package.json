@@ -1,6 +1,6 @@
 {
-  "name": "gkchris-pathdoras-box",
-  "version": "1.2.5",
+  "name": "pathdoras-box",
+  "version": "1.2.6",
   "description": "A tool to extract all paths related to .js files under a specific root",
   "main": "pathtool.js",
   "scripts": {
