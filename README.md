@@ -14,7 +14,7 @@ Second parameter needs to be an empty array.
 Third parameter is optional. Pass true for writing results to external txt file
 
 ```Javascript
-const {pathtool} = require('gkchris-pathdoras-box');
+const {pathtool} = require('pathdoras-box');
 
 pathtool('<root_folder_path>', [], Boolean)
 ```
