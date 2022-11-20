@@ -16,5 +16,11 @@ Third parameter is optional. Pass true for writing results to external txt file
 ```Javascript
 const {pathtool} = require('pathdoras-box');
 
-pathtool('<root_folder_path>', [], Boolean)
+function get_paths(){
+    pathtool('<your_root_folder_path>', [], Boolean)
+    .then(res => console.log('res',res))
+    .catch(err => console.log('err',err));
+}
+
+get_paths()
 ```
