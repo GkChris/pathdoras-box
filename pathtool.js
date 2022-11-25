@@ -26,7 +26,7 @@ function pathtool(dir, results, txtWrite){
             type = await fsp.lstat(path)
             
             if(type.isFile() && content.endsWith('.js')) {
-                path = path.slice(2);
+                // path = path.slice(2);
                 results.push(path)
                 if(txtWrite) fs.appendFileSync('paths.txt', path+'\n')
                 continue;
