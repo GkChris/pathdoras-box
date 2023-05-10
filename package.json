@@ -1,7 +1,7 @@
 {
   "name": "pathdoras-box",
-  "version": "1.4.1",
-  "description": "A tool to extract all paths related to .js files under a specific root",
+  "version": "1.4.2",
+  "description": "A tool to extract all paths with files that ends in .js under a specific root",
   "main": "pathtool.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
