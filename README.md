@@ -2,11 +2,11 @@
 
 ## Description
 
-A tool to extract all paths with files that ends in .js under a specific root
+Pathtool is a powerful tool designed to extract all file paths that end with .js within a specified root directory. It serves as a valuable asset for both coding purposes and storing data in an external text file.
 
-A useful tool both for coding usage and saving data to external txt file. 
+The tool meticulously traverses every branch of the folder tree originating from the specified root directory. During this process, it resolves and captures the file paths of all JavaScript files (.js). This comprehensive search ensures that no relevant files are overlooked.
 
-Pathtool parses through every single branch of the root's folder tree and resolves the paths of all .js files. Additionally it is possible to write the paths to an external .txt file named *paths.txt*, located inside the parent folder if the 3rd parameter is true.  
+Furthermore, Pathtool provides an option to write the extracted file paths to an external text file named paths.txt. This text file is placed in the parent folder if the third parameter is set to true. This feature offers a convenient way to save and reference the extracted paths for future use. 
 
 **Note that pathtool skips node_modules content**
 

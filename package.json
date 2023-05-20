@@ -1,7 +1,7 @@
 {
   "name": "pathdoras-box",
-  "version": "1.4.2",
-  "description": "A tool to extract all paths with files that ends in .js under a specific root",
+  "version": "1.4.3",
+  "description": "Pathtool is a powerful tool designed to extract all file paths that end with .js within a specified root directory",
   "main": "pathtool.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,7 @@
     "search"
   ],
   "author": "gkchris",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/GkChris/gkchris-pathdoras-box/issues"
   },
