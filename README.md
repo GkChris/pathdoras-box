@@ -33,14 +33,6 @@ get_paths()
 
 ## Arguments
 
-- root-folder-path (Required) -> String
-
-- Empty array (Required)
-
-- Boolean (Optional)
-
->Boolean parameter is optional. Pass true for writing results to external txt file
-
 
 | Argument       | Required | Type    | Description                                      |
 |----------------|----------|---------|--------------------------------------------------|
