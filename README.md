@@ -23,7 +23,7 @@ npm i pathdoras-box
 const {pathtool} = require('pathdoras-box');
 
 function get_paths(){
-    pathtool('<your_root_folder_path>', [], Boolean)
+    pathtool('<your_root directory>', [], Boolean)
     .then(res => console.log('res',res))
     .catch(err => console.log('err',err));
 }
@@ -40,3 +40,10 @@ get_paths()
 - Boolean (Optional)
 
 >Boolean parameter is optional. Pass true for writing results to external txt file
+
+
+| Argument       | Required | Type    | Description                                      |
+|----------------|----------|---------|--------------------------------------------------|
+| root directory | required | string  | Specified root directory                         |
+| Empty array    | required | array   | Required for the algorithm to operate            |
+| Store data     | optional | boolean | Option to store data to file (default: false).   |
